@@ -32,8 +32,8 @@
 
 
 
+// Alright, START HERE. This shit gon' WORK *************
 
-// Could I do it THIS way??? AUGUST 14th EVENING RESEARCH *************
 
 const civilizations = {}
 
@@ -66,51 +66,94 @@ civilizations.answer = {
         tally: ''
     }
 };
-civilizations.tallyAnswers = function(){
-    for(let item in civilizations.answer) {
-        $('section').append('hi.scott ' + item.name);
-
-        console.log(item.name);
-    }
-}
 
 
+//BEGIN TRIAL AND ERROR
+
+const random = function (array) {
+    const number = Math.floor(Math.random() * array.length);
+    // console.log(number);
+    return array[number];
+};
 
 
-// var dataArray = new Array();
-// $('.popupDiv').each(function () {
-//     var data-firstLetter data-secondLetter = $(this).data('activate');
-//     if (!dataArray.indexOf(data-firstLetter data-secondLetter)) {
-//         dataArray.push(data-firstLetter data-secondLetter);
-//         $('.popupDiv[data-layer="' + data-firstLetter + data-secondLetter + '"]').each(function () {
-//         });
-//     }
-// });
+$(function () {
+    //Our code goes in here
 
+    //when the form submits
 
-civilizations.getResults = function () {
     $('form').on('submit', function (e) {
         e.preventDefault();
-        let answers1 = $('input[name=active]').data('firstLetter', 'secondLetter');
+        // console.log('Ancient Civilizations HOLLAAAAA');
 
-        // civilizations.answer[answers] = 
-        // civilizations.answer[answers] + 1;
-        console.log(answers1);
+        const answerYes = $('input[name=active-yes]:checked').val();
+        const answerNo = $('input[name=active-no]:checked').val();
+        console.log($('input[name=active-yes]'));
 
-        $('ul').empty();
 
-        civilizations.tallyAnswers(answers1);
+
+        //match the users choice to the info object
+        //get the dink information
+        const civilizationIndicator = civilizations[answerYes];
+
+        //get price information
+        const civilizationArray = [];
+
+        for (let i = 0; i < civilizationIndicator.length; i++) {
+            if (civilizationIndicator[i].price === answerNo) {
+                // console.log(drinkInfo[i]);
+                civilizationArray.push(civilizationIndicator[i].title);
+            }
+        }
+        console.log(civilizationArray);
+
+        console.log(random(civilizationArray));
+
+        $('.results').html(`<h2 class="choice">${random(civilizationArray)}</h2>`)
+
     });
 
-}
-
-civilizations.init = function(){
-    civilizations.getResults();
-}
-
-$(function() {
-    civilizations.init();
 });
+
+//END TRIAL AND ERROR 
+
+
+
+
+// *******************************************************
+// Could I do it THIS way??? AUGUST 14th EVENING RESEARCH **********************************************************
+
+// civilizations.tallyAnswers = function(){
+//     for(let item in civilizations.answer) {
+//         $('section').append('hi.scott' + item.name);
+
+//         console.log(item.name);
+//     }
+// }
+
+// civilizations.getResults = function () {
+//     $('form').on('submit', function (e) {
+//         e.preventDefault();
+//         let answers1 = $('input[name=active]').data('firstLetter', 'secondLetter');
+
+//         // civilizations.answer[answers] = 
+//         // civilizations.answer[answers] + 1;
+//         console.log(answers1);
+
+//         $('ul').empty();
+
+//         civilizations.tallyAnswers(answers1);
+//     });
+
+// }
+
+// civilizations.init = function(){
+//     civilizations.getResults();
+// }
+
+// $(function() {
+//     civilizations.init();
+// });
 
 
 
@@ -118,6 +161,11 @@ $(function() {
 
 
 
+
+
+
+
+// __________________________________________________________
 // FIRST STEPS:::::::::::
 
 // ID's will be grabbed when the quiz is complete, and all the answers have been selected;
