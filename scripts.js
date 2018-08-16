@@ -94,8 +94,14 @@ civilizations.getResults = function () {
         // ^ All answers are displayed in console
 
         // Now display them in an array:
+        let allAnswers = [answer, answer2, answer3, answer4, answer5, answer6, answer7]
 
-        
+
+        let mostFrequentItem = function(array){
+            
+        }
+
+        mostFrequentItem(allAnswers);
 
         $('ul').empty();
 
