@@ -67,93 +67,50 @@ civilizations.answer = {
     }
 };
 
+// *******************************************************
+// Could I do it THIS way??? AUGUST 15th EVENING RESEARCH **********************************************************
 
-//BEGIN TRIAL AND ERROR
+civilizations.tallyAnswers = function(){
+    for(let item in civilizations.answer) {
+        $('section').append('civilizations.answer' + item.name);
 
-const random = function (array) {
-    const number = Math.floor(Math.random() * array.length);
-    // console.log(number);
-    return array[number];
-};
+        // console.log(item.name);
+    }
+}
 
-
-$(function () {
-    //Our code goes in here
-
-    //when the form submits
-
+civilizations.getResults = function () {
     $('form').on('submit', function (e) {
         e.preventDefault();
-        // console.log('Ancient Civilizations HOLLAAAAA');
+        let answer = $('input[name=active]:checked').val();
+        let answer2 = $('input[name=handy]:checked').val();
+        let answer3 = $('input[name=resourceful]:checked').val();
+        let answer4 = $('input[name=travel]:checked').val();
+        let answer5 = $('input[name=party]:checked').val();
+        let answer6 = $('input[name=smart]:checked').val();
+        let answer7 = $('input[name=power]:checked').val();
+        
+        console.log(answer, answer2, answer3, answer4, answer5, answer6, answer7);
 
-        const answerYes = $('input[name=active-yes]:checked').val();
-        const answerNo = $('input[name=active-no]:checked').val();
-        console.log($('input[name=active-yes]'));
+        // ^ All answers are displayed in console
 
+        // Now display them in an array:
 
+        
 
-        //match the users choice to the info object
-        //get the dink information
-        const civilizationIndicator = civilizations[answerYes];
+        $('ul').empty();
 
-        //get price information
-        const civilizationArray = [];
-
-        for (let i = 0; i < civilizationIndicator.length; i++) {
-            if (civilizationIndicator[i].price === answerNo) {
-                // console.log(drinkInfo[i]);
-                civilizationArray.push(civilizationIndicator[i].title);
-            }
-        }
-        console.log(civilizationArray);
-
-        console.log(random(civilizationArray));
-
-        $('.results').html(`<h2 class="choice">${random(civilizationArray)}</h2>`)
-
+        civilizations.tallyAnswers(answer);
     });
 
+}
+
+civilizations.init = function(){
+    civilizations.getResults();
+}
+
+$(function() {
+    civilizations.init();
 });
-
-//END TRIAL AND ERROR 
-
-
-
-
-// *******************************************************
-// Could I do it THIS way??? AUGUST 14th EVENING RESEARCH **********************************************************
-
-// civilizations.tallyAnswers = function(){
-//     for(let item in civilizations.answer) {
-//         $('section').append('hi.scott' + item.name);
-
-//         console.log(item.name);
-//     }
-// }
-
-// civilizations.getResults = function () {
-//     $('form').on('submit', function (e) {
-//         e.preventDefault();
-//         let answers1 = $('input[name=active]').data('firstLetter', 'secondLetter');
-
-//         // civilizations.answer[answers] = 
-//         // civilizations.answer[answers] + 1;
-//         console.log(answers1);
-
-//         $('ul').empty();
-
-//         civilizations.tallyAnswers(answers1);
-//     });
-
-// }
-
-// civilizations.init = function(){
-//     civilizations.getResults();
-// }
-
-// $(function() {
-//     civilizations.init();
-// });
 
 
 
