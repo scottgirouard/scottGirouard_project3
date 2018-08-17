@@ -45,37 +45,41 @@ const civilizations = {}
 //     e: 'mongols'
 // }
 civilizations.answer = {
-    a: {
-        name: 'romans',
-        tally: ''
+    a: {   
+        name : 'romans',
+        tally: 0
     },
-    b: {
+    b: { 
         name: 'greeks',
-        tally: ''
+        tally: 0
     },
     c: {
         name: 'persians',
-        tally: ''
+        tally: 0
     },
     d: {
         name: 'chinese',
-        tally: ''
+        tally: 0
     },
     e: {
         name: 'mongols',
-        tally: ''
+        tally: 0
     }
 };
 
 // *******************************************************
 // Could I do it THIS way??? AUGUST 15th EVENING RESEARCH **********************************************************
+civilizations.tally = []
 
 civilizations.tallyAnswers = function(array){
-    for(let item in civilizations.answer) {
-        $('section').append('civilizations.answer' + item.name);
-
-        console.log(item.name);
+    for (let answer in civilizations.answer) {
+        let count = array.reduce(function (n, val) {
+            return n + (val === `${answer}`);
+        }, 0);
+        civilizations.answer[answer].tally = civilizations.answer[answer].tally + count; 
     }
+    console.log(civilizations.answer)
+
 }
 civilizations.mostFrequentItem = function(array) {
 
@@ -89,7 +93,6 @@ civilizations.mostFrequentItem = function(array) {
     // var compare = 0;  //We are going to compare using stored value
     // var mostFrequentItem;  //We are going to store most frequent item
     console.log(array);
-    this.tallyAnswers(array);
     // console.log("success")
 
  //find duplicates in array - push those duplicates to new array
@@ -123,6 +126,8 @@ civilizations.getResults = function () {
         console.log(allAnswers);
 
         civilizations.mostFrequentItem(allAnswers);
+
+        civilizations.tallyAnswers(allAnswers)
     });
 };
     //     for (var i = 0, i < allAnswers.length i++) {
