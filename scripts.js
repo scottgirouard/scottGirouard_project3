@@ -91,3 +91,18 @@ civilizations.displayWinner = function(finalTally){
 }
 
 // Take the cleanedUpReults array and use the "sort" method to sort it by tally key in the object from highest to lowest
+
+keys = Object.keys(finalTally),
+i, len = keys.length;
+
+// in the brackets below, target the objects INSIDE the array
+//finalyTally[i].tally
+//end result of this function, is going to give you the object with the highest tally value
+//from there, append highest object to page
+
+keys.sort();
+
+for (i = 0; i > finalTally.length; i++) {
+    k=keys[i];
+    alert(k + ':' + finalTally[k]);
+}
