@@ -47,22 +47,27 @@ const civilizations = {}
 civilizations.answer = {
     a: {   
         name : 'romans',
+        // value: a,
         tally: 0
     },
     b: { 
         name: 'greeks',
+        // value: b,
         tally: 0
     },
     c: {
         name: 'persians',
+        // value: c,
         tally: 0
     },
     d: {
         name: 'chinese',
+        // value: d,
         tally: 0
     },
     e: {
         name: 'mongols',
+        // value: e,
         tally: 0
     }
 };
