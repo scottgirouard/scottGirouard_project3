@@ -1,3 +1,12 @@
 $primaryColor: black;
 $secondaryColor: rgb(151, 209, 228);
 $secondaryColorDarker: rgb(99, 182, 209);
+
+@mixin breakPoint($point) {
+ @if $point == 750 {
+     @media (max-width: 750px) { @content; }
+ }
+ @else if $point == 600 {
+   @media (max-width: 600px) { @content; }
+ }   
+}

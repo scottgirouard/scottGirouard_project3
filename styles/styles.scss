@@ -15,18 +15,22 @@ html {
     max-width: 1170px;
     margin: 0 auto;
     width: 70%;
-    background-color: rgba(151, 209, 228, 0.6);
+    background-color: rgba(151, 209, 228, 0.7);
 
 }
 
 fieldset {
     margin: 20px;
     padding: 10px;
+    text-align: center;
+    @include breakPoint(700) {
+        font-size: 30px;
+    }
 }
 
 input {
     padding: 7px;
-    margin: 5px 10px 25px 10px;
+    margin: 5px 10px 20px 10px;
 }
 
 .get-results {
@@ -36,4 +40,5 @@ input {
 
 .result-box {
     background-color: rgba(190, 213, 221, 0.1);
+    text-align: center;
 }

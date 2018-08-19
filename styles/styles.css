@@ -136,12 +136,13 @@ img {
   max-width: 100%; }
 
 h1 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 40px;
+  font-family: 'Metamorphous', cursive;
+  font-size: 45px;
+  letter-spacing: 2px;
   font-weight: 800;
   text-transform: uppercase;
   text-align: center;
-  color: #97d1e4; }
+  color: rgba(230, 255, 255, 0.888); }
 
 html {
   font-family: 'Libre Baskerville', serif; }
@@ -157,19 +158,21 @@ html {
   max-width: 1170px;
   margin: 0 auto;
   width: 70%;
-  background-color: rgba(151, 209, 228, 0.6); }
+  background-color: rgba(151, 209, 228, 0.7); }
 
 fieldset {
   margin: 20px;
-  padding: 10px; }
+  padding: 10px;
+  text-align: center; }
 
 input {
   padding: 7px;
-  margin: 5px 10px 25px 10px; }
+  margin: 5px 10px 20px 10px; }
 
 .get-results {
   margin-left: 43%;
   color: #63b6d1; }
 
 .result-box {
-  background-color: rgba(190, 213, 221, 0.1); }
+  background-color: rgba(190, 213, 221, 0.1);
+  text-align: center; }
