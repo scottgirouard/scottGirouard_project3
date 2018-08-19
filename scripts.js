@@ -5,19 +5,23 @@ const civilizations = {}
 civilizations.answer = {
     a: {   
         name : 'Romans',
-        tally: 0
+        tally: 0,
+        content: 'Time Period: 550 BC - 465 BC<br><br>Based off your selections, you could have been a Roman due to your spirituality; the ancient Roman culture was full of myths, and often blurred the line between fact and fiction. Your (alleged) thirst for power would have also come in handy, as the Romans were the MOST POWERFUL ancient civilization, ruling over the biggest area of land in that era; all the countries surrounding the Mediterranean sea in present day were part of ancient Rome.' 
     },
     b: { 
         name: 'Greeks',
-        tally: 0
+        tally: 0,
+        content: 'YOU A GREEK!!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, quod atque libero, placeat ex neque eveniet sit soluta accusamus nam eos ea incidunt laboriosam quia doloribus praesentium distinctio quidem mollitia minima quos illo deleniti eius. Quae necessitatibus odio, est ratione eligendi, sed maiores nesciunt libero adipisci beatae eius illum quasi.' 
     },
     c: {
         name: 'Persians',
-        tally: 0
+        tally: 0,
+        content: 'Time Period: 550 BC - 465 BC<br><br>Based off your selections, you could have been living in modern day Iran as part of one of the most powerful empires in the world at the time. Although they were only in power for a little over 200 years, there were 2 million square miles that were conquered by the Persians; the southern portions of Egypt, the eastern parts of India, and even parts of Greece. The Persian empire was best known for its wise rulers and military strength.' 
     },
     d: {
         name: 'Chinese',
-        tally: 0
+        tally: 0,
+        content: 'Test 420 TEST Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, quod atque libero, placeat ex neque eveniet sit soluta accusamus nam eos ea incidunt laboriosam quia doloribus praesentium distinctio quidem mollitia minima quos illo deleniti eius. Quae necessitatibus odio, est ratione eligendi, sed maiores nesciunt libero adipisci beatae eius illum quasi.' 
     },
     e: {
         name: 'Mongols',
@@ -100,20 +104,24 @@ civilizations.displayWinner = function(finalTally){
 
     if(civilizations.answer.a.tally === winner) {
         let yourCiv = civilizations.answer.a.name;
-        $('.resultBox').html(`<p class="civilization">Your civilization is ${yourCiv}</p>`);
+        let yourContent = civilizations.answer.a.content;
+        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.b.tally === winner) {
         let yourCiv = civilizations.answer.b.name;
-        $('.resultBox').html(`<p class="civilization">Your civilization is ${yourCiv}</p>`);
+        let yourContent = civilizations.answer.b.content;
+        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.c.tally === winner) {
         let yourCiv = civilizations.answer.c.name;
-        $('.resultBox').html(`<p class="civilization">Your civilization is ${yourCiv}</p>`);
+        let yourContent = civilizations.answer.c.content;
+        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.d.tally === winner) {
         let yourCiv = civilizations.answer.d.name;
-        $('.resultBox').html(`<p class="civilization">Your civilization is ${yourCiv}</p>`);
+        let yourContent = civilizations.answer.d.content;
+        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.e.tally === winner) {
         let yourCiv = civilizations.answer.e.name;
         let yourContent = civilizations.answer.e.content;
-        $('.resultBox').html(`<p class="civilization">Your civilization is ${yourCiv}</p><p>${yourContent}</p>`);
+        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else null
 
  //   $('.resultBox').html(`<p class="civilization">Your civilization is ${yourCiv}</p>`);
