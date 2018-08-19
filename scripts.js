@@ -105,23 +105,23 @@ civilizations.displayWinner = function(finalTally){
     if(civilizations.answer.a.tally === winner) {
         let yourCiv = civilizations.answer.a.name;
         let yourContent = civilizations.answer.a.content;
-        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
+        $('.result-box').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.b.tally === winner) {
         let yourCiv = civilizations.answer.b.name;
         let yourContent = civilizations.answer.b.content;
-        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
+        $('.result-box').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.c.tally === winner) {
         let yourCiv = civilizations.answer.c.name;
         let yourContent = civilizations.answer.c.content;
-        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
+        $('.result-box').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.d.tally === winner) {
         let yourCiv = civilizations.answer.d.name;
         let yourContent = civilizations.answer.d.content;
-        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
+        $('.result-box').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else if (civilizations.answer.e.tally === winner) {
         let yourCiv = civilizations.answer.e.name;
         let yourContent = civilizations.answer.e.content;
-        $('.resultBox').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
+        $('.result-box').html(`<p class="civilization">Your civilization is the... ${yourCiv}</p><p>${yourContent}</p>`);
     } else null
 
  //   $('.resultBox').html(`<p class="civilization">Your civilization is ${yourCiv}</p>`);

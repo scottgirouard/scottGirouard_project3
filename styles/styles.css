@@ -136,15 +136,40 @@ img {
   max-width: 100%; }
 
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 40px;
+  font-weight: 800;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  color: #97d1e4; }
 
-body {
-  background-color: darkseagreen; }
+html {
+  font-family: 'Libre Baskerville', serif; }
+
+html {
+  background: url(https://cangeo-media-library.s3.amazonaws.com/s3fs-public/styles/web_article_slider_image/public/images/web_articles/article_images/4782/e006581135-pos.png?itok=nhfLWiKa) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
-  width: 70%; }
+  width: 70%;
+  background-color: rgba(151, 209, 228, 0.6); }
+
+fieldset {
+  margin: 20px;
+  padding: 10px; }
+
+input {
+  padding: 7px;
+  margin: 5px 10px 25px 10px; }
+
+.get-results {
+  margin-left: 43%;
+  color: #63b6d1; }
+
+.result-box {
+  background-color: rgba(190, 213, 221, 0.1); }
