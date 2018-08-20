@@ -23,6 +23,7 @@ fieldset {
     margin: 20px;
     padding: 10px;
     text-align: center;
+    border: none;
 }
 
 input {
@@ -51,6 +52,11 @@ p:hover {
     text-align: center;
     padding: 7px;
     margin: 27px;
+    border: hidden;
+}
+
+.result-box:hover {
+   border: 5px inset rgb(221, 186, 157);
 }
 
 @media(max-width: 835px) {

@@ -169,7 +169,8 @@ html {
 fieldset {
   margin: 20px;
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  border: none; }
 
 input {
   padding: 7px;
@@ -196,7 +197,11 @@ p:hover {
   background-color: rgba(190, 213, 221, 0.1);
   text-align: center;
   padding: 7px;
-  margin: 27px; }
+  margin: 27px;
+  border: hidden; }
+
+.result-box:hover {
+  border: 5px inset #ddba9d; }
 
 @media (max-width: 835px) {
   .get-results {
