@@ -8,6 +8,11 @@ h1 {
     color: rgba(230, 666, 666, .888);
 }
 
+h1:hover {
+    color: rgba(230, 666, 666, .666);
+    transition: 0.5s;
+}
+
 html {
     font-family: 'Libre Baskerville', serif;
 
